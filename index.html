@@ -8,17 +8,13 @@
    
     <title>Was kostet ein Bitcoin aktuell</title>
 </head>
-<body onload="loadCourse()">
+<body onload="showblockChain(), hideDate()">
 
     <h1>Hier finden Sie aktuelle Blockchain- Kurse</h1>
-    <div id="datePicker"></div>
-        <input type="date" name="" id="startDate">
-        <input type="date" name="" id="endDate">
-    </div>
-    <div id="course"></div>
-        <div>Aktuell kostet ein Blockchain <b id="blockchainInUSDToday">60.000</b> USD</div>
-    </div>
+    <div id="main"></div>
 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <script src="./app.js"></script>
+    
 </body>
 </html>
