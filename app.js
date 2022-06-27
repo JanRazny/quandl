@@ -7,8 +7,8 @@ let blockChain = [];
 function toDay() {
     let today = new Date();
     today.setDate(new Date().getDate() - 1);
-    let startDate = today.toISOString().split('T')[0];
-    let endDate = today.toISOString().split('T')[0];
+    // let startDate = today.toISOString().split('T')[0];
+    // let endDate = today.toISOString().split('T')[0];
 }
 
 
@@ -17,8 +17,8 @@ function showblockChain() {
     mainArea.innerHTML = "";
     mainArea.innerHTML = /*html */ `
         <div id="datePicker"></div>
-            <input type="date" id="startDate" value="2022-06-19">
-            <input type="date" id="endDate" value="2022-06-19">
+            <input type="date" id="startDate" value="2022-06-19" onclick="datePickerStart()">
+            <input type="date" id="endDate" value="2022-06-19" onclick="datePickerEnd()">
         </div>
         <div id="course"></div>
             <div>Aktuell kostet ein Blockchain <b id="blockchainInUSDToday">60.000</b> USD</div>
@@ -80,7 +80,17 @@ function hideDate() {
     document.getElementById('endDate').setAttribute('max', minDate);
     document.getElementById('startDate').setAttribute('max', minDate);
 
-};
+}
+
+function datePickerStart() {
+    startDate = document.getElementById('startDate').value;
+    console.log('startDate');
+}
+
+function datePickerEnd() {
+    endDate = document.getElementById('endDate').value;
+    console.log('endDate');
+}
 
 // function datePicker(startDate, endDate) {
 //     let dateControlStart = document.getElementById('startDate');
